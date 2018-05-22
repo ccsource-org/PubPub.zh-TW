@@ -1,0 +1,75 @@
+// Import Normalize, Blueprint, Editor, and Grid
+// ****************************
+@import "~normalize.css";
+@import "./blueprint.scss";
+@import "./grid.scss";
+
+/* I'm not sure why I need to import these                    */
+/* It seems that for other instances, (e.g. File Addon)       */
+/* the css that is imported within the package is sufficient. */
+/* But that doesn't seem to be the case for the following     */
+@import "~@pubpub/editor/dist/style.scss";
+@import "~katex/dist/katex.css";
+
+// Set global styles
+// ****************************
+body {
+	background-color: #FFF;
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	overflow-x: hidden;
+	color: #333;
+	font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", sans-serif;
+}
+sup {
+	line-height: 1;
+}
+.subtext {
+	color: #555;
+	font-size: 0.85em;
+}
+.pt-non-ideal-state {
+	height: auto;
+}
+.no-click {
+	pointer-events: none;
+}
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.legal-wrapper {
+	margin: 1em 0em 2em;
+	h1 {
+		margin: 1em 0em;
+	}
+	ul, ol {
+		font-size: 1.125rem;
+		line-height: 1.5;
+	}
+	a {
+		text-decoration: underline;
+	}
+}
+
+.pt-input {
+	-webkit-appearance: none;
+}
+
+@include font-face("pubpub-icons", "../static/icons/pubpub-icons", $file-formats: eot woff ttf svg);
+.pt-icon-team:before { font-family: 'pubpub-icons' !important; content: "\e903"; }
+.pt-icon-edit2:before { font-family: 'pubpub-icons' !important; content: "\e904"; }
+.pt-icon-doc:before { font-family: 'pubpub-icons' !important; content: "\e902"; }
+.pt-icon-admin:before { font-family: 'pubpub-icons' !important; content: "\e900"; }
+.pt-icon-lock2:before { font-family: 'pubpub-icons' !important; content: "\e901"; }
+.pt-icon-google-scholar:before { font-family: 'pubpub-icons' !important; content: "\e828"; }
+.pt-icon-doi:before { font-family: 'pubpub-icons' !important; content: "\e822"; }
+.pt-icon-orcid:before { font-family: 'pubpub-icons' !important; content: "\e840"; }
+.pt-icon-facebook:before { font-family: 'pubpub-icons' !important; content: "\ea90"; }
+.pt-icon-twitter:before { font-family: 'pubpub-icons' !important; content: "\ea96"; }
+.pt-icon-github:before { font-family: 'pubpub-icons' !important; content: "\eab0"; }
+.pt-icon-linkedin:before { font-family: 'pubpub-icons' !important; content: "\eaca"; }
+.pt-icon-reddit:before { font-family: 'pubpub-icons' !important; content: "\eac6"; }
+.pt-icon-google-plus:before { font-family: 'pubpub-icons' !important; content: "\ea8b"; }
